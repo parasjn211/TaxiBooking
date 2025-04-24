@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Document</title>
+</head>
+<body>
+	<h1>READ ALL CONTACTS SECTION</h1>
+    <a href="dashboard">ADMIN HOME</a><br><br><br>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+				<th>EMAIL</th>
+				<th>MESSAGE</th>
+				<th>PHONE</th>	
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="contact : ${allcontacts}">
+				<td th:text="${contact.id}"></td>
+				<td th:text="${contact.name}"></td>
+				<td th:text="${contact.email}"></td>
+				<td th:text="${contact.message}"></td>
+				<td th:text="${contact.phone}"></td>
+			</tr>
+		</tbody>
+	</table>		
+</body>
+</html>

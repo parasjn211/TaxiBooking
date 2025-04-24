@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Details Table</title>
+    <style>
+        table {
+            width: 90%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+	<h1>READ ALL BOOKINGS SECTION</h1>
+	<a href="dashboard">ADMIN HOME</a><br><br><br>
+	<h2 th:text="${message}"></h2>
+    <table>
+        <caption>Booking Details</caption>
+        <thead>
+            <tr>
+				<th>Id</th>
+                <th>Name</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Email</th>
+                <th>Time</th>
+                <th>Date</th>
+                <th>Comfort</th>
+                <th>Adults</th>
+                <th>Children</th>
+                <th>Message</th>
+				<th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="booking : ${allBookings}">
+				<td th:text="${booking.id}"></td>
+                <td th:text="${booking.name}"></td>
+                <td th:text="${booking.source}"></td>
+                <td th:text="${booking.destination}"></td>
+                <td th:text="${booking.email}"></td>
+                <td th:text="${booking.time}"></td>
+                <td th:text="${booking.date}"></td>
+                <td th:text="${booking.comfort}"></td>
+                <td th:text="${booking.adults}"></td>
+                <td th:text="${booking.children}"></td>
+                <td th:text="${booking.message}"></td>
+				<td><a  th:href="@{/admin/deleteBooking/{id} (id=${booking.id}) }">DELETE</a></td>
+            </tr>
+           
+        </tbody>
+    </table>
+
+</body>
+</html>

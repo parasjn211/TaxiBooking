@@ -1,0 +1,8 @@
+package com.taxi.service;
+
+import com.taxi.model.ContactForm;
+
+public interface ContactFormService {
+
+	public ContactForm saveContactFormService(ContactForm contactForm);
+}

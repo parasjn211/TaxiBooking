@@ -1,0 +1,9 @@
+package com.taxi.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.taxi.model.BookingForm;
+
+public interface BookingFormCrud extends JpaRepository<BookingForm, Integer> {
+
+}

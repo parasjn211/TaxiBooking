@@ -1,0 +1,74 @@
+package com.taxi.model;
+
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+public class ContactForm {
+
+	private int id;
+	@NotEmpty(message="Name cannot be empty")
+	@Size(min=2 , max=30, message="Invalid name size")
+	private String name;
+	@NotEmpty(message="Email cannot be empty")
+	@Size(min=5 , max=50, message="Email name size")
+	private String email;
+	@NotNull(message="Phone number is required")
+	@Min(value = 1000000000, message="Phone number must be atleast 10 digit")
+	@Max(value = 9999999999L, message="Phone number must be atleast 10 digit")
+	private Long phone;
+	@NotEmpty(message="Message cannot be empty")
+	@Size(min=5 , max=500, message="Message name size")
+	private String message;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Long getPhone() {
+		return phone;
+	}
+	public void setPhone(Long phone) {
+		this.phone = phone;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	@Override
+	public String toString() {
+		return "ContactForm [name=" + name + ", email=" + email + ", phone=" + phone + ", message=" + message
+				+ ", getName()=" + getName() + ", getEmail()=" + getEmail() + ", getPhone()=" + getPhone()
+				+ ", getMessage()=" + getMessage() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
+	}
+	public ContactForm(String name, String email, Long phone, String message) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.message = message;
+	}
+	public ContactForm() {
+	    // No-arg constructor
+	}
+
+	
+}

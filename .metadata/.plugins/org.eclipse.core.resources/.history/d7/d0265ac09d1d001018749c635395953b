@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+	<h1>Welcome</h1>
+	<a href="#">READ ALL CONTACTS</a>
+	<a href="#">READ ALL BOOKINGS</a>	
+</body>
+</html>

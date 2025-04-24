@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    
+	<h1>Welcome to Admin Panel</h1>
+	<a href="readAllContacts">READ ALL CONTACTS</a>
+	<a href="#">READ ALL BOOKINGS</a>	
+	
+	<a href="/dologout">LOGOUT</a>
+</body>
+</html>

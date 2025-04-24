@@ -1,0 +1,33 @@
+package com.taxi.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import com.taxi.service.ContactFormService;
+
+
+@Controller
+@RequestMapping("/admin")
+public class AdminController {
+
+	private ContactFormService contactFormService;
+	
+	
+	@Autowired
+	public void setContactFormService(ContactFormService contactFormService) {
+		this.contactFormService = contactFormService;
+	}
+	@GetMapping("/dashboard")
+	public String adminDashboard() {
+		return "admin/dashboard";
+	}
+	@GetMapping("/readAllContacts")
+	public String readAllContacts(Model model) {
+		
+		model.addAttribute("allcontacts",
+				contactFormService.readAllContactsService());
+		return "admin/readallcontacts";
+	}
+}

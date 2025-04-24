@@ -1,0 +1,12 @@
+package com.taxi.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.taxi.model.Admin;
+import java.util.Optional;
+
+
+public interface AdminDao extends JpaRepository<Admin, Integer> {
+
+	Optional<Admin> findByUsername(String username);
+}

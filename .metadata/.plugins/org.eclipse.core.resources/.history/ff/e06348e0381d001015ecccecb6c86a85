@@ -1,0 +1,8 @@
+package com.taxi.service;
+
+import com.taxi.model.BookingForm;
+
+public interface BookingFormService {
+
+	public BookingForm saveBookingFormService(BookingForm bookingForm);
+}

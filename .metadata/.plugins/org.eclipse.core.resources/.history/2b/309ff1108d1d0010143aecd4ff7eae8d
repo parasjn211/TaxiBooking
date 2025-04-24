@@ -1,0 +1,5 @@
+package com.taxi.dao;
+
+public interface AdminDao {
+
+}

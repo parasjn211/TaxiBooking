@@ -1,0 +1,11 @@
+package com.taxi.service;
+
+import org.springframework.stereotype.Service;
+
+import com.taxi.model.BookingForm;
+
+@Service
+public interface BookingFormService {
+
+	public BookingForm saveBookingFormService(BookingForm bookingForm);
+}

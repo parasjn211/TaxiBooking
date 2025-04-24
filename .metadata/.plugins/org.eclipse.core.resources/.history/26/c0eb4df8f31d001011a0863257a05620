@@ -1,0 +1,11 @@
+package com.taxi.service;
+
+public class AdminCredentialsServiceImpl implements AdminCredentialsService {
+
+	@Override
+	public String checkAdminCredentials(String oldusername, String oldpassword) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

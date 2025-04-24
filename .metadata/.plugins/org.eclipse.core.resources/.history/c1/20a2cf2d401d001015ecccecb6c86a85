@@ -1,0 +1,5 @@
+package com.taxi.controller;
+
+public class AdminController {
+
+}

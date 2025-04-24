@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Change Credentials</title>
+</head>
+<body>
+	<form action="changeCredentials" method="post">
+		<input type="text" name="oldusername" placeholder="Enter old username"><br>
+		<input type="text" name="oldpassword" placeholder="Enter old password"><br>
+		<input type="text" name="newusername" placeholder="Enter new username"><br>
+		<input type="text" name="newpassword" placeholder="Enter new password"><br>
+		<button>Change</button>
+	</form>
+</body>
+</html>
